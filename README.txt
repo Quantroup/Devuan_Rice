@@ -12,6 +12,8 @@
 ██║  ██║██║╚██████╗███████╗                         
 ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝                         
 
+Please look at the picures folder for previews...
+
 =Why this exists=
 I wanted to share my custom config for Devuan GNU/Linux
 
