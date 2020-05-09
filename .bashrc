@@ -63,7 +63,9 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PS1="\[\e[92m\]\[┌┼───┤\] \[\e[35m\]\u\[\e[39m\]@\[\e[91m\]\h \[\e[92m\]\[├───┤\] \t \[├───────┤\] \[\e[91m\]\w \[\e[92m\]\[├─────\]\n\]\[└┼─\]\[\e[92m\]\$\[\e[92m\]\[─┤\]►\[\e[39m\]\a\a" # There is a problem with bash word wrap and to fix this we had to add these bells(\a) to prevent flows.
+PS1="\[\e[92m\]\[┌┼───┤\] \[\e[35m\]\u\[\e[39m\]@\[\e[91m\]\h \[\e[92m\]\[├───┤\] \t \[├───────┤\] \[\e[91m\]\W \[\e[92m\]\[├─────\]\n\]\[└┼─\]\[\e[92m\]\$\[\e[92m\]\[─┤►\]\e[39m" # By the power of sheer luck and escape charecters, there is no overflow of text.
+# If you want to add more stuff try to use escape charecters ( \[foo\] ) when you don't want stuff to be counted
+# towards the text length, making word wraps possible.
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
